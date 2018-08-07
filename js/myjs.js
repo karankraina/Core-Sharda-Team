@@ -80,5 +80,12 @@ function handleSignUp() {
         });
         // [END authwithemail]
         
-        window.location.href = "https://www.google.com";
-      }
+        window.open("index.html",'_self');
+    }
+      
+
+function gotolog(){
+  window.open("login.html",'_self');
+    
+
+}
