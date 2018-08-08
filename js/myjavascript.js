@@ -11,11 +11,29 @@
   firebase.initializeApp(config);
 
 var db = firebase.database();
+function updateProfile(){
+  var first = document.getElementById('first').value;
+      var last = document.getElementById('last').value;
+      var mob = document.getElementById('mob').value;
+      upDate(first, last, mob);
+      alert('Information Updated !!!');
+      window.open('learnsharda.html', '_self')
+
+
+      
+}
+
+function upDate(a,b,c){
+  db.ref().child('Users').child(firebase.auth().currentUser.uid).child('First Name').set(a);
+      db.ref().child('Users').child(firebase.auth().currentUser.uid).child('Last Name').set(b);
+      db.ref().child('Users').child(firebase.auth().currentUser.uid).child('Mobile').set(c);
+
+}
 
 function handleSignUp() {
-     var email = document.getElementById('email').value;
-      var password = document.getElementById('pwd').value;
-      var name = document.getElementById('name').value;
+     var email = document.getElementById('regemail').value;
+      var password = document.getElementById('regpwd').value;
+      //var name = document.getElementById('name').value;
       if (email.length < 4) {
         alert('Please enter an email address.');
         return;
@@ -34,13 +52,13 @@ function handleSignUp() {
         if (errorCode == 'auth/weak-password') {
           alert('The password is too weak.');
         } else {
-          alert(errorMessage);
+         // alert(errorMessage);
         }
         console.log(error);
       });
       // [END createwithemail]
-      
-      db.ref().child('Users').child(firebase.auth().currentUser.uid).child('Name').set(name);
+      alert ('Mubarak!!! Please provide some details .');
+      window.open("profile.html",'_self');
       
     }
 
@@ -51,8 +69,8 @@ function handleSignUp() {
 //firebase.auth().signOut();
         // [END signout]
      // } else {
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
+        var email = document.getElementById('logemail').value;
+        var password = document.getElementById('logpassword').value;
         if (email.length < 4) {
           alert('Please enter an email address.');
           return;
@@ -63,7 +81,11 @@ function handleSignUp() {
         }
         // Sign in with email and pass.
         // [START authwithemail]
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        firebase.auth().signInWithEmailAndPassword(email, password).then(function(user) {
+   // user signed in
+   alert('Sign In successful');
+            window.open('learnsharda.html','_self');
+            }).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
@@ -71,15 +93,23 @@ function handleSignUp() {
           if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
           } else {
-            alert(errorMessage);
+            //alert(errorMessage);
           }
           console.log(error);
-          document.getElementById('quickstart-sign-in').disabled = false;
+          firebase.auth().onAuthStateChanged(function(user) {
+              if (user) {
+                   // User is signed in.
+                   
+
+              } else {
+    // No user is signed in.
+                }
+          });
+          //document.getElementById('quickstart-sign-in').disabled = false;
           // [END_EXCLUDE]
         });
         // [END authwithemail]
-        window.alert('Welcome!!!');
-        window.open("index.html",'_self');
+       
     }
       
 
@@ -87,9 +117,9 @@ function handleSignUp() {
   if (user) {
     // User is signed in.
       console.log("Hurray ! signed in successfully !");
-      window.alert('Hath Hath Mubarak!!! Welcome!!!');
+      //window.alert('Hath Hath Mubarak!!! Welcome!!!');
       
-     window.open("login.html",'_self');
+     //window.open("login.html",'_self');
   } else {
     // No user is signed in.
      console.log("Sign in required !");
@@ -99,7 +129,19 @@ function handleSignUp() {
 
 
 function gotolog(){
-  window.open("register.html",'_self');
+  window.open("login.html",'_self');
     
 
+}
+function mysignOut(){
+  firebase.auth().signOut()
+  .then(function() {
+    // Sign-out successful.
+    alert('signed out');
+    window.open('logout.html', '_self');
+  })
+  .catch(function(error) {
+    // An error happened
+    alert('errrroorrrrr');
+  });
 }

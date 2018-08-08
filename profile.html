@@ -17,6 +17,7 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+
     <style>
       @font-face {
                 font-family: "sharda";
@@ -39,7 +40,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+          <!--<div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav absolute-right">
               <li class="nav-item">
                 <a href="login.html" class="nav-link">Login</a>
@@ -49,7 +50,7 @@
               </li>
             </ul>
             
-          </div>
+          </div>-->
         </div>
       </nav>
     </header>
@@ -64,30 +65,44 @@
               <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-5 box">
-            <h2 class="mb-5">Log in with your account</h2>
-            <div action="#" method="post">
+            
+            <div action="#" method="post"><!--form-->
+                  
+                  
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <label for="name">Email</label>
-                      <input type="text" id="logemail" class="form-control ">
+                      <label for="name">First Name</label>
+                      <input type="text" id="first" class="form-control ">
                     </div>
                   </div>
-                  <div class="row mb-5">
+                  <div class="row">
                     <div class="col-md-12 form-group">
-                      <label for="name">Password</label>
-                      <input type="password" id="logpassword" class="form-control ">
+                      <label for="name">Last Name</label>
+                      <input type="text" id="last" class="form-control ">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Mobile Number</label>
+                      <input type="number" id="mob" class="form-control ">
                     </div>
                   </div>
                   
+                  <!--<div class="row mb-5">
+                    
+                  </div>-->
+                  
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <input type="submit" value="Login" onclick="toggleSignIn()" class="btn btn-primary">
+                      <input type="submit" value="Update Profile" onclick="updateProfile()" class="btn btn-primary">
                     </div>
+              
                   </div>
-                </div>
+                </div><!--form-->
           </div>
         </div>
       </div>
+              
             </div>
           </div>
         </div>
@@ -96,7 +111,10 @@
     <!-- END section -->
 
 
-    
+    <!--scripts-->
+
+
+
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
     <script src="js/popper.min.js"></script>
@@ -104,16 +122,15 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
    
 
 
 
-    <script type="text/javascript" src="js/myjavascript.js"></script>
-
-    
+    <script src="js/myjavascript.js"></script>
     <script src="js/main.js"></script>
+    
   </body>
 </html>
