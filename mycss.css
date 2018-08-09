@@ -1,0 +1,74 @@
+@font-face {
+                font-family: "sharda";
+                src: url("NotoSansSharada-Regular.ttf");
+                  }
+
+
+.flip3d{
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+	margin-top: 30px;
+	float: left;
+	
+}
+.container{
+	position: relative;
+}
+.jumbotron{
+	text-align: center;
+}
+marquee{
+	font-family: sharda;
+	color: orange;
+	font-size:30px;
+}
+
+
+.flip3d > .front{
+	position: absolute;
+	transform: perspective(1000px) rotateY(0deg);
+	background: #FC0; width: 150px; height: 150px; border-radius: 9px;
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+}
+
+.flip3d > .back{
+	position: absolute;
+	transform: perspective(1000px) rotateY(180deg);
+	background: #80BFFF; width: 150px; height: 150px; border-radius: 9px;
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+}
+
+.flip3d:hover > .front{
+	transform: perspective(1000px) rotateY(-180deg);
+
+}
+.flip3d:hover > .back{
+	transform: perspective(1000px) rotateY(0deg);
+
+}
+
+.txt1{
+	font-family: sharda;
+}
+
+.back, .front{
+	text-align: center;
+	
+}
+.txt1{
+	font-size: 60px;
+	max-height: 80%;
+	
+}
+.txt2{
+	width: auto;
+	max-height: 20%;
+	left: 50%;
+	padding: 0px;
+	text-align: center;
+	font-size: 25px;
+	
+}

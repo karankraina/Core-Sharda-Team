@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name=viewport content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+<title>Shardapeetham</title>
+
+<script src="js/jquery-1.7.min.js"></script>
+<script src="js/modernizr.custom.34982.js"></script>
+
+<script src="js/sketcher.js"></script>
+<script src="js/trigonometry.js"></script>
+
+<link rel="stylesheet" href="assets/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/styles.css" />
+<style>
+	canvas{
+		background-image: url('assets/a.jpg');
+		opacity: 7
+	}
+  .row{
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  #ing{
+     border-style: solid;
+    border-width: 5px;
+    border-color: #E4E3E3;
+    border-radius: 6px;
+  }
+  #ing1{
+     border-style: solid;
+    border-width: 5px;
+    border-color: #000000;
+    border-radius: 6px;
+  }
+  wimg{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #E4E3E3;
+    border-radius: 6px;
+  }
+</style>
+
+<script>
+var sketcher = null;
+var brush = null;
+
+$(document).ready(function(e) {
+	
+	brush = new Image();
+	  brush.src = 'assets/brush2.png';
+	  brush.onload = function(){
+		sketcher = new Sketcher( "sketch", brush );
+	  }
+	
+});
+
+</script>
+
+</head>
+
+<body>
+<div class="topbar-wrapper" style="z-index: 5;">
+    <div class="topbar" data-dropdown="dropdown">
+      <div class="topbar-inner">
+        <div class="container">
+          <h3><a href="#">Shardapeetham</a></h3>
+          
+          <ul class="nav">
+            <li class="active"><a href="#">Let's Learn Sharda !</a></li>
+          </ul>
+          
+          <ul class="nav secondary-nav">
+            <a href="#">
+             <input type="button" class="btn error" value="clear"
+             	onclick="sketcher.clear();" />
+             </a>
+          </ul>
+        </div>
+      </div><!-- /topbar-inner -->
+    </div><!-- /topbar -->
+  </div>
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+           <a href="index.html"><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href="pages/a.html"><img src="assets/a.jpg" id="ing1" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href="pages/aa.html"><img src="assets/aa.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href="pages/ei.html"><img src="assets/ei.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href="pages/ee.html"><img src="assets/ee.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <a href=""><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href=""><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href=""><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href=""><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href=""><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <a href=""><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href=""><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href=""><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href=""><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+          <div class="col-md-2">
+            <a href=""><img src="assets/s.jpg" id="ing" width="100px" height="100px">
+          </div></a>
+        </div>
+        
+
+      </div>
+    </div>
+    <div class="col-md-5">
+
+      <canvas id="sketch" width="638" height="750" />
+    
+    </div>
+  </div>
+</div>
+    
+</body>
+</html>

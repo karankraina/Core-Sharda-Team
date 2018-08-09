@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name=viewport content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+<title>Shardapeetham</title>
+
+<script src="js/jquery-1.7.min.js"></script>
+<script src="js/modernizr.custom.34982.js"></script>
+
+<script src="js/sketcher.js"></script>
+<script src="js/trigonometry.js"></script>
+
+<link rel="stylesheet" href="assets/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/styles.css" />
+<style>
+  canvas{
+    background-image: url('assets/alphabet/27.jpg');
+    opacity: 1
+  }
+  html, body{
+     /* get rid of default spacing on the edges */
+    margin: 0;
+    padding: 0;
+
+    /* get rid of that 2px window border in Internet Explorer 6 */
+    border: 0;
+
+    /* fill the height of the browser */
+    height: 100%;
+
+    /* no more scroll bar */
+    overflow: hidden;
+    
+   
+  }
+  #main {
+        height: 100vh;
+        width: 100vw;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-position: center top;
+    }
+  #myForm {
+position:absolute;
+left:0;
+top:0
+}
+  #hh{
+    text-align: left;
+    background-color: orange;
+  }
+  .col-md-6{
+    margin: -20px;
+  }
+  .row{
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  #ing{
+     border-style: solid;
+    border-width: 5px;
+    border-color: #E4E3E3;
+    border-radius: 6px;
+  }
+  #ing1{
+     border-style: solid;
+    border-width: 5px;
+    border-color: orange;
+    border-radius: 6px;
+  }
+  wimg{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #E4E3E3;
+    border-radius: 6px;
+  }
+
+  ================
+  .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+@media screen and (max-device-width: 480px){
+    input, select {width:100%}
+    }
+</style>
+
+<script>
+var sketcher = null;
+var brush = null;
+
+$(document).ready(function(e) {
+  
+  brush = new Image();
+    brush.src = 'assets/brush2.png';
+    brush.onload = function(){
+    sketcher = new Sketcher( "sketch", brush );
+    }
+  
+});
+// When the user clicks on <div>, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+
+</script>
+
+</head>
+
+<body>
+<div class="topbar-wrapper" style="z-index: 5;">
+    <div class="topbar" data-dropdown="dropdown">
+     
+            <a href="#">
+             <input type="button" class="btn error" value="clear"
+              onclick="sketcher.clear();" />
+             </a>
+          </ul>
+        </div>
+      </div><!-- /topbar-inner -->
+    </div><!-- /topbar -->
+  </div>
+ 
+</div>
+
+  
+
+
+
+
+
+
+<div style="position:relative">    
+<div id="main">
+  <canvas id="sketch" width="371" height="550" />
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
