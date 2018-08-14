@@ -1,0 +1,116 @@
+ @font-face {
+                font-family: "sharda";
+                src: url("NotoSansSharada-Regular.ttf");
+                  }
+ /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+ 
+ 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -40px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 120px;
+}
+.foot{
+	position: fixed;
+	width: 100%;
+	margin-bottom: 0px;
+	bottom: 0pc;
+	height: 10px;
+	padding: 10px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+.act{
+	color: red;
+}
+
+.ab:hover {
+    color: #000;
+    background: #EEE;
+}
+.closebtn:hover{
+	color: #f1f1f1;
+}
+.navbar-brand:hover{
+	text-decoration: underline;
+}
+.glyphicon{
+	background: #001;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    z-index: 99;
+}
+td{
+  font-family: sharda;
+  font-size: 20px;
+} 
+p{
+  font-family: sharda;
+}
+#activenow{
+  color: blue;
+  background: #fff;
+}
+
+.text-center{
+	margin-top: 70px;
+}
+.navbar-fixed-top{
+	z-index: 1;
+}
+.jumbotron{
+	padding:10px;
+}
+

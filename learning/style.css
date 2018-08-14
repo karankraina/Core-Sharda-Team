@@ -1,0 +1,45 @@
+@font-face {
+                font-family: "sharda";
+                src: url("NotoSansSharada-Regular.ttf");
+                  }
+h2{
+	font-family: sharda;
+}
+body{
+	background: #EEE;
+}
+.jumbotron{
+	padding: 2px;
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+	background: #000;
+	color: #EEE;
+	text-align: center;
+	top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3000;
+
+	
+
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+}
+.sidebar {
+  flex: 0 0 160px;
+  background: lightblue;
+}
+.page-wrapper {
+  flex: 1 1 auto;
+  background: orange;
+}

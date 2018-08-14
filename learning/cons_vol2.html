@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="mycss.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     
+
+      <!--<a class="navbar-brand" href="#">--> <button class="button btn-primary" style="font-size:30px;border-radius: 20px;color:#fff;cursor:pointer" onclick="openNav()">Lessons!</button>
+     
+    </div>
+   
+    
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="ab" href="../alphabets.html">Vowels</a>
+  <a class="ab" href="../alphabets.html">Consonants</a>
+  <a class="ab" href="../alphabets.html">Numbers</a>
+  <a class="ab" href="cons_vol">Consonants Followed By Vowels</a>
+  <a class="ab" id="activenow" href="#">Consonants Followed By Vowels-Exceptions</a>
+  <a class="ab" href="#">Non-initials (ु) and (ू)</a>
+  <a class="ab" href="#">The Akshara (रु) and (रू)</a>
+  <a class="ab" href="#">Conjunct Forms</a>
+  <a class="ab" href="#">Typical Conjunct Forms</a>
+  <a class="ab" href="#">Conjunct Example</a>
+  <a class="ab" href="#">Sharda Learning Videos</a>
+  <a class="ab" href="https://www.youtube.com/channel/UCIyGDdIPfusRSU48sjccTrg?sub_confirmation=1">Shardapeetham @ Youtube</a>
+  <a class="ab" href="../learnsharda.html"><span style="color: red;">Exit Course</span></a>
+</div>
+    <div class="col-sm-8"> 
+      <div class="jumbotron">
+        <h2>Consonants Followed By Vowels-Exceptions</h2>
+        <br>
+        <p> The letters ङ(𑆕), ज(𑆘), ट(𑆛), ण(𑆟) already have a ( 𑆳 ) likestroke on their right, and hence, with non-initial ( 𑆳 ), the this stroke and the vowel combine into a kind of semi-circle or hollow triangle which is called Kundali wahay.</p>
+        <div class="container">
+          <br>
+          <h2>Example</h2><hr>
+          <table class="table">
+            <thead>
+              <tr>
+                <td><b>Hindi</b></td>
+                <td><b>Sharda</b></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ङा</td>
+                <td>𑆕𑆳</td>
+              </tr>
+              <tr>
+                <td>जा</td>
+                <td>𑆘𑆳</td>
+              </tr>
+              <tr>
+                <td>टा</td>
+                <td>𑆛𑆳</td>
+              </tr>
+              <tr>
+                <td>णा</td>
+                <td>𑆟𑆳</td>
+              </tr>
+              
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+   <!-- <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>-->
+  </div>
+</div>
+<!--
+<footer class="foot container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+-->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "350px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+     
+</body>
+</html>

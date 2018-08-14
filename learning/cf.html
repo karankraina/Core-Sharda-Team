@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+ 
+ 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -40px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 120px;
+}
+.foot{
+	position: fixed;
+	width: 100%;
+	margin-bottom: 0px;
+	bottom: 0pc;
+	height: 10px;
+	padding: 10px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+.act{
+	color: red;
+}
+
+.ab:hover {
+    color: #000;
+    background: #EEE;
+}
+.closebtn:hover{
+	color: #f1f1f1;
+}
+.navbar-brand:hover{
+	text-decoration: underline;
+}
+.glyphicon{
+	background: #001;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    z-index: 99;
+} 
+
+
+.text-center{
+	margin-top: 70px;
+}
+.navbar-fixed-top{
+	z-index: 1;
+}
+.jumbotron{
+	padding:10px;
+}
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     
+
+      <!--<a class="navbar-brand" href="#">--> <button class="button btn-primary" style="font-size:30px;border-radius: 20px;color:#fff;cursor:pointer" onclick="openNav()">Lessons!</button>
+     
+    </div>
+   
+    
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="ab" href="../alphabets.html">Vowels</a>
+  <a class="ab" href="../alphabets.html">Consonants</a>
+  <a class="ab" href="../alphabets.html">Numbers</a>
+  <a class="ab" href="#">Consonants Followed By Vowels</a>
+  <a class="ab" href="#">Consonants Followed By Vowels-Exceptions</a>
+  <a class="ab" href="#">Non-initials (ु) and (ू)</a>
+  <a class="ab" href="#">The Akshara (रु) and (रू)</a>
+  <a class="ab" href="#">Conjunct Forms</a>
+  <a class="ab" href="#">Typical Conjunct Forms</a>
+  <a class="ab" href="#">Conjunct Example</a>
+  <a class="ab" href="#">Sharda Learning Videos</a>
+  <a class="ab" href="https://www.youtube.com/channel/UCIyGDdIPfusRSU48sjccTrg?sub_confirmation=1">Shardapeetham @ Youtube</a>
+  <a class="ab" href="../learnsharda.html"><span style="color: red;">Exit Course</span></a>
+</div>
+    <div class="col-sm-8"> 
+      <div class="jumbotron">
+      	<h1>Welcome</h1>
+      	<p>Welcome to this <span style= "font-weight: bolder; color: blue">Online Sharda Learning Course</span></p>
+      </div>
+    </div>
+   <!-- <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>-->
+  </div>
+</div>
+<!--
+<footer class="foot container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+-->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "350px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+     
+</body>
+</html>
