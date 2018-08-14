@@ -94,9 +94,9 @@
 }
 td{
   font-family: sharda;
-  font-size: 20px;
+  font-size: 40px;
 } 
-p{
+p, h2, body, html{
   font-family: sharda;
 }
 #activenow{
